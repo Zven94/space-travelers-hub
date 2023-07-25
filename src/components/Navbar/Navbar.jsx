@@ -11,7 +11,7 @@ export default function Navbar() {
           <li className="header-li">
             <NavLink to="/"> Rockets </NavLink>
             <NavLink to="/missions"> Missions</NavLink>
-            <NavLink />
+            <NavLink to="/profile">My Profile</NavLink>
           </li>
         </ul>
       </header>
