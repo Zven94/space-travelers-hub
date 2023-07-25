@@ -1,11 +1,9 @@
 import MissionComponent from '../components/Mission/MissionComponent';
 
-const Missions = () => {
-return (
+const Missions = () => (
   <>
     <MissionComponent />
   </>
-)
-}
+);
 
 export default Missions;
