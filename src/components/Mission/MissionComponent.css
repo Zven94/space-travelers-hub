@@ -23,11 +23,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .nav-logoPlanet {
-  width: 50px;  
+  width: 50px;
 }
