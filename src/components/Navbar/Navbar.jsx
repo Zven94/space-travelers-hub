@@ -7,13 +7,13 @@ export default function Navbar() {
       <header className="nav-header">
         <img src={logoPlanet} className="nav-logoPlanet" alt="logoPlanet" />
         <h2>Space Traveler`s Hub</h2>
-        <lu>
+        <ul>
           <li className="header-li">
             <NavLink to="/"> Rockets </NavLink>
             <NavLink to="/missions"> Missions</NavLink>
-            <NavLink />
+            <NavLink to="/profile">My Profile</NavLink>
           </li>
-        </lu>
+        </ul>
       </header>
     </main>
   );
