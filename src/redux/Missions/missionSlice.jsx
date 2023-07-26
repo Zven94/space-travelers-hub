@@ -17,18 +17,29 @@ const initialState = {
 const missionSlice = createSlice({
   name: 'missions',
   initialState,
+  reducers: {
+    join: (state, action) => {
+      const mission = state.missions.find((mission) => mission.id === action.payload);
+      mission.status = true;
+    },
+    leave: (state, action) => {
+      const mission = state.missions.find((mission) => mission.id === action.payload);
+      mission.status = false;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(missionsData.fulfilled, (state, action) => ({
         ...state,
         missions: action.payload.map((mission) => ({
-          id: mission.missions_id,
           name: mission.mission_name,
+          id: mission.mission_id,
           description: mission.description,
-          status: false,
+          status: mission.status,
         })),
       }));
   },
 });
 
+export const { join, leave } = missionSlice.actions;
 export default missionSlice.reducer;

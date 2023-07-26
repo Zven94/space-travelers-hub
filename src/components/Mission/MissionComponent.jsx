@@ -2,7 +2,7 @@ import './MissionComponent.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../Navbar/Navbar';
-import { missionsData } from '../../redux/Missions/missionSlice';
+import { missionsData, join, leave } from '../../redux/Missions/missionSlice';
 
 function MissionComponent() {
   const dispatch = useDispatch();
@@ -28,19 +28,40 @@ function MissionComponent() {
             <tr key={mission.id}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
-              <td>{mission.status ? 'Active' : 'Inactive'}</td>
-              <td><button type="submit">submit</button></td>
+
+              <td>
+                {mission.status ? (
+                  <span className="badge text-bg-primary">Active member</span>
+                ) : (
+                  <span className="badge text-bg-secondary">Not a member</span>
+                )}
+              </td>
+              <td className="text-center col-2">
+                {mission.status ? (
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger"
+                    onClick={() => dispatch(leave(mission.id))}
+                  >
+                    Leave Mission
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary"
+                    onClick={() => dispatch(join(mission.id))}
+                  >
+                    Join Mission
+                  </button>
+                )}
+              </td>
+
             </tr>
           ))}
         </table>
-        {/* {missions.map((missions) => (
-          <li key={missions.id}>
-            <p>{missions.name}</p>
-          </li>
-        ))} */}
       </div>
     </>
   );
 }
 
-export default MissionComponent;
+export default (MissionComponent);
