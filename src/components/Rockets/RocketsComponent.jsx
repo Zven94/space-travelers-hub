@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets, selectRocket } from '../../redux/rockets/rocketsSlice';
 import Navbar from '../Navbar/Navbar';
 
-
 const Rockets = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.rockets);
