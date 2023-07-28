@@ -1,21 +1,26 @@
 .flex {
   display: flex;
 }
+
 li {
   list-style: none;
 }
+
 .rocket-container {
   padding: 1.5rem 2.5rem;
 }
+
 .rocket-list {
   flex-direction: column;
   gap: 1.2rem;
 }
+
 .rocket-list li {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   gap: 1.2rem;
 }
+
 .rocket-img {
   width: 100%;
 }
@@ -28,9 +33,11 @@ li {
 .rocket-name {
   font-size: 2.1em;
 }
+
 .rocket-description {
   font-size: 1.5em;
 }
+
 .reserveBttn {
   align-self: flex-start;
   padding: 0.8em 1.5em;
