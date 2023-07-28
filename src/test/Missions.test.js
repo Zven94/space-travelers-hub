@@ -7,7 +7,7 @@ import Mission from '../router/Missions';
 import MissionComponent from '../components/Mission/MissionComponent';
 import MissionsList from '../components/Mission/ProfileMission';
 
-describe('test for missions components', () => {
+describe('test for missions components and profile link', () => {
   const mission = (
     <Provider store={configureStore}>
       <Router>
@@ -16,7 +16,7 @@ describe('test for missions components', () => {
     </Provider>
   );
 
-  test('Take snapshot from the element', () => {
+  test('Take snapshot for the Mission element', () => {
     const missionComponent = render(mission);
     expect(missionComponent).toMatchSnapshot();
   });
@@ -29,7 +29,7 @@ describe('test for missions components', () => {
     </Provider>
   );
 
-  test('Take snapshot from the element', () => {
+  test('Take snapshot for MissionsComponent', () => {
     const tableComponent = render(table);
     expect(tableComponent).toMatchSnapshot();
   });
@@ -42,7 +42,7 @@ describe('test for missions components', () => {
     </Provider>
   );
 
-  test('Take snapshot from the element', () => {
+  test('Take snapshot for the list of missions on Profile', () => {
     const listComponent = render(list);
     expect(listComponent).toMatchSnapshot();
   });

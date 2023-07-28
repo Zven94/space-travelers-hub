@@ -27,7 +27,7 @@ function MissionComponent() {
           <h2>Missons</h2>
           <Table bordered striped>
             <thead>
-              <tr>
+              <tr className="font-weight-bold">
                 <th>Missions</th>
                 <th>Description</th>
                 <th>Status</th>
@@ -37,17 +37,17 @@ function MissionComponent() {
             <tbody>
               {missions?.map((mission) => (
                 <tr key={mission.id}>
-                  <td>{mission.name}</td>
+                  <td><h3 className="fs-6">{mission.name}</h3></td>
                   <td>{mission.description}</td>
 
-                  <td>
+                  <td className="align-middle">
                     {mission.status ? (
                       <Badge>Active member</Badge>
                     ) : (
                       <Badge bg="danger">Not a member</Badge>
                     )}
                   </td>
-                  <td className="text-center col-2">
+                  <td className="align-middle">
                     {mission.status ? (
                       <button
                         type="button"
