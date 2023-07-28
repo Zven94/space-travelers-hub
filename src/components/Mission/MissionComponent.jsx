@@ -44,7 +44,7 @@ function MissionComponent() {
                     {mission.status ? (
                       <Badge>Active member</Badge>
                     ) : (
-                      <Badge bg="danger">Not a member</Badge>
+                      <Badge bg="info">Not a member</Badge>
                     )}
                   </td>
                   <td className="align-middle">
