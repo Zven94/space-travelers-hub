@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const missionsData = createAsyncThunk('missions/missionsData', async () => {
-  const response = await fetch('https://api.spacexdata.com/v3/rockets');
+  const response = await fetch('https://api.spacexdata.com/v3/missions');
   const data = await response.json();
   return data;
 });
