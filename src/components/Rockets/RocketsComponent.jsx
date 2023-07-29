@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets, selectRocket } from '../../redux/rockets/rocketsSlice';
 import RocketList from './RocketList';
 import Navbar from '../Navbar/Navbar';
+import '../Rockets/RocketsComponent.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
