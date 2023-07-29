@@ -1,0 +1,86 @@
+.flex {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+.rocket-container {
+  padding: 1.5rem 2.5rem;
+}
+
+.rocket-list {
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.rocket-list li {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  gap: 1.2rem;
+}
+
+.rocket-img {
+  width: 100%;
+}
+
+.rocket-textBox {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rocket-name {
+  font-size: 2.1em;
+  margin-top: 0.1em;
+}
+
+.rocket-description {
+  font-size: 1.5em;
+  margin-bottom: auto;
+}
+
+.reserveBttn {
+  align-self: flex-start;
+  padding: 0.8em 1.5em;
+  background-color: rgb(25, 108, 209);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.cancelBttn {
+  align-self: flex-start;
+  padding: 0.8em 1.5em;
+  background-color: transparent;
+  color: #000;
+  border: 0.5px solid #000;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.rocket-badge {
+  padding: 2px 4px;
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #0a94e9;
+  color: rgba(255, 255, 255, 0.919);
+  border-radius: 5px;
+}
+
+.reserved--badge {
+  width: 70px;
+  height: auto;
+  padding-block: 2px;
+  margin-block: 5px;
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #0a94e9;
+  color: rgba(255, 255, 255, 0.919);
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}

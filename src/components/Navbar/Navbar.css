@@ -1,0 +1,12 @@
+.header-li {
+  list-style: none;
+}
+
+.div-width {
+  width: 70%;
+}
+
+.navlink-border {
+  border-right: 1px solid #dee2e6;
+  padding-right: 1rem;
+}

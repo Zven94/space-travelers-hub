@@ -1,0 +1,43 @@
+@media (prefers-reduced-motion: no-preference) {
+  .nav-logo {
+    animation: nav-logo-spin infinite 20s linear;
+  }
+}
+
+.nav-header {
+  width: 90%;
+  background-color: #fff;
+  min-height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+}
+
+.nav-link {
+  color: #61dafb;
+}
+
+@keyframes nav-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-logoPlanet {
+  width: 50px;
+}
+
+.div-table {
+  width: 100%;
+}
+
+/* .aling-buttons {
+  display: flex;
+} */
