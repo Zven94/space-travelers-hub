@@ -1,3 +1,4 @@
+import '../Rockets/RocketsComponent.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets, selectRocket } from '../../redux/rockets/rocketsSlice';
