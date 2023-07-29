@@ -7,40 +7,40 @@ export default function MissionsList() {
 
   return (
     <>
-      <div>
-        <h2>My Missions</h2>
+      <div className="my-profile d-flex flex-row justify-content-around elemento-a-row w-5">
         <div>
-          {
-            missionsList.lenght === 0 ? (
-              <h3>No missions yet</h3>
-            ) : (
+          <h2>My Missions</h2>
+          <div>
+
               <ul className="m-0 p-0">
-                {missionsList.map((mission, index) => (
-                  <li
-                    key={mission.id}
-                    className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}
-                  >
-                    {mission.name}
-                  </li>
-                ))}
+            {missionsList.length ? (
+              missionsList.map((mission, index) => (
+                <li key={mission.id} className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}>
+                  {mission.name}
+                </li>
+              ))
+            ) : (
+              <li className="list-group-item">No Reserved Missions</li>
+            )}
               </ul>
-            )
-          }
+            
+          
+          </div>
         </div>
-      </div>
-      <div>
-        <h2>My Rockets</h2>
-        <ul>
-          {reservedRocket.length ? (
-            reservedRocket.map((rocket) => (
-              <li key={rocket.id} className="list-group-item">
-                {rocket.name}
-              </li>
-            ))
-          ) : (
-            <li className="list-group-item">No Reserved Rockets</li>
-          )}
-        </ul>
+        <div>
+          <h2>My Rockets</h2>
+          <ul>
+            {reservedRocket.length ? (
+              reservedRocket.map((rocket, index) => (
+                <li key={rocket.id} className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}>
+                  {rocket.name}
+                </li>
+              ))
+            ) : (
+              <li className="list-group-item">No Reserved Rockets</li>
+            )}
+          </ul>
+        </div>
       </div>
     </>
   );
