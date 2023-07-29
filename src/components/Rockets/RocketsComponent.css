@@ -32,10 +32,12 @@ li {
 
 .rocket-name {
   font-size: 2.1em;
+  margin-top: 0.1em;
 }
 
 .rocket-description {
   font-size: 1.5em;
+  margin-bottom: auto;
 }
 
 .reserveBttn {
@@ -46,6 +48,7 @@ li {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .cancelBttn {
@@ -56,6 +59,7 @@ li {
   border: 0.5px solid #000;
   cursor: pointer;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .rocket-badge {
