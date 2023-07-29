@@ -11,6 +11,7 @@ import Rockets from './router/Rockets';
 import Missions from './router/Missions';
 import configureStore from './redux/configureStore';
 import Profile from './router/MyProfile';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {

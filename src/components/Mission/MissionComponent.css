@@ -5,14 +5,15 @@
 }
 
 .nav-header {
-  background-color: #282c34;
+  width: 90%;
+  background-color: #fff;
   min-height: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
 }
 
 .nav-link {
@@ -32,3 +33,11 @@
 .nav-logoPlanet {
   width: 50px;
 }
+
+.div-table {
+  width: 100%;
+}
+
+/* .aling-buttons {
+  display: flex;
+} */

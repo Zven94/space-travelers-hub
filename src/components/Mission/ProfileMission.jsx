@@ -7,29 +7,41 @@ export default function MissionsList() {
 
   return (
     <>
-      {
-        missionsList.lenght === 0 ? (
-          <h3>No missions yet</h3>
-        ) : (
-          <ul>
-            {missionsList.map((mission) => (
-              <li key={mission.id} className="list-group-item">
-                {mission.name}
-              </li>
-            ))}
-            {reservedRocket.length ? (
-              reservedRocket.map((rocket) => (
-                <li key={rocket.id} className="list-group-item">
-                  {rocket.name}
-                </li>
-              ))
+      <div>
+        <h2>My Missions</h2>
+        <div>
+          {
+            missionsList.lenght === 0 ? (
+              <h3>No missions yet</h3>
             ) : (
-              <li className="list-group-item">No Reserved Rockets</li>
-            )}
-          </ul>
-        )
-
-      }
+              <ul className="m-0 p-0">
+                {missionsList.map((mission, index) => (
+                  <li
+                    key={mission.id}
+                    className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}
+                  >
+                    {mission.name}
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+      </div>
+      <div>
+        <h2>My Rockets</h2>
+        <ul>
+          {reservedRocket.length ? (
+            reservedRocket.map((rocket) => (
+              <li key={rocket.id} className="list-group-item">
+                {rocket.name}
+              </li>
+            ))
+          ) : (
+            <li className="list-group-item">No Reserved Rockets</li>
+          )}
+        </ul>
+      </div>
     </>
   );
 }
