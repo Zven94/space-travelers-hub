@@ -12,19 +12,18 @@ export default function MissionsList() {
           <h2>My Missions</h2>
           <div>
 
-              <ul className="m-0 p-0">
-            {missionsList.length ? (
-              missionsList.map((mission, index) => (
-                <li key={mission.id} className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}>
-                  {mission.name}
-                </li>
-              ))
-            ) : (
-              <li className="list-group-item">No Reserved Missions</li>
-            )}
-              </ul>
-            
-          
+            <ul className="m-0 p-0">
+              {missionsList.length ? (
+                missionsList.map((mission, index) => (
+                  <li key={mission.id} className={`list-group-item border ${index % 2 === 0 ? 'bg-primary-subtle' : 'bg-white'}`}>
+                    {mission.name}
+                  </li>
+                ))
+              ) : (
+                <li className="list-group-item">No Reserved Missions</li>
+              )}
+            </ul>
+
           </div>
         </div>
         <div>
