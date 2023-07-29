@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 export default function MissionsList() {
   const { missions } = useSelector((store) => store.missions);
   const missionsList = missions.filter((mission) => mission.status);
+  const reservedRocket = useSelector((state) => state.rockets.rockets.filter((rocket) => rocket.reserved === true));
 
   return (
     <>
